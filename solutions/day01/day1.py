@@ -22,7 +22,6 @@ with open('input.txt') as f:
 
     for l in lines:
         found = find_nums(l, True)
-        print(found)
         found_sorted = sorted(found, key=lambda x: x[1])
         nums = [v[0] for v in found_sorted]
         try:

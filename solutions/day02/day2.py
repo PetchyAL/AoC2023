@@ -28,8 +28,7 @@ with open('input.txt') as f:
 valid_games = []
 power = 0
 for l in lines:
-    valid = check_game(l)
-    valid_games.append(l[0]) if valid else 0
+    valid_games.append(l[0]) if check_game(l) else 0
     power += get_power(l)
 
 #Results

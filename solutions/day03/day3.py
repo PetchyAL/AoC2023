@@ -63,5 +63,5 @@ for line in range(1, len(lines)-1):
         else: continue
 
 #Results
-print(sum(parts))#Part 1
-print(sum(gear_ratios))#Part 2
+print(sum(parts)) #Part 1
+print(sum(gear_ratios)) #Part 2

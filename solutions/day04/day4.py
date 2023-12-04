@@ -17,6 +17,7 @@ for c in range(len(cards)):
             if r + 1 < len(cards):
                 card_reward[r + 1] += card_reward[c]
             else: break
+                
 #Results
 print(points) #Part 1
 print(sum(card_reward)) #Part 2

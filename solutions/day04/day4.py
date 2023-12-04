@@ -12,7 +12,7 @@ for c in range(len(cards)):
     for num in winning:
         matching_numbers += 1 if num in own else 0
     if matching_numbers > 0:
-        points += (1 * (pow(2, matching_numbers - 1)))
+        points += pow(2, matching_numbers - 1)
         for r in range(c, c + matching_numbers):
             if r + 1 < len(cards):
                 card_reward[r + 1] += card_reward[c]

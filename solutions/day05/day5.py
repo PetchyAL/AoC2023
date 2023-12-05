@@ -12,7 +12,6 @@ def map_section(bounds, next_map):
                 next_ranges.append([0 + m[1][0], (m[0][1] - m[0][0]) + m[1][0]])
                 del bounds[i]
                 bounds.extend([[bound[0], m[0][0]], [m[0][1], bound[1]]])
-                pass
             #If not complete encapsulation
             if bound[0] >= m[0][0] and bound[0] < m[0][1]:
                 next_ranges.append([(bound[0] - m[0][0]) +  m[1][0], (m[0][1] - m[0][0]) +  m[1][0]])

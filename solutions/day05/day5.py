@@ -7,13 +7,12 @@ def map_section(bounds, next_map):
             if bound[0] >= m[0][0] and bound[1] <= m[0][1]:
                 next_ranges.append([(bound[0] - m[0][0]) +  m[1][0], (bound[1] - m[0][0]) + m[1][0]])
                 bound[0] = bound[1]
-                break
             elif bound[0] < m[0][0] and bound[1] > m[0][1]:
                 next_ranges.append([0 + m[1][0], (m[0][1] - m[0][0]) + m[1][0]])
                 del bounds[i]
                 bounds.extend([[bound[0], m[0][0]], [m[0][1], bound[1]]])
             #If not complete encapsulation
-            if bound[0] >= m[0][0] and bound[0] < m[0][1]:
+            elif bound[0] >= m[0][0] and bound[0] < m[0][1]:
                 next_ranges.append([(bound[0] - m[0][0]) +  m[1][0], (m[0][1] - m[0][0]) +  m[1][0]])
                 bound[0] = m[0][1]
             elif bound[1] >= m[0][0] and bound[1] <= m[0][1]:

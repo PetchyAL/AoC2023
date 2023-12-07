@@ -6,7 +6,7 @@ def get_type(hand, strength):
             jokers = hand.count(c)
         else: counts.append(hand.count(c)) if c in hand else 0
     if not counts: return 6
-    if max(counts) + jokers in [4, 5]:
+    elif max(counts) + jokers in [4, 5]:
         return max(counts) + jokers + 1
     elif len(counts) == 2 and max(counts) + jokers == 3: 
         return 4

@@ -37,5 +37,4 @@ for group in groups.values():
     for hand in group:
         result += rank * hand[1]
         rank += 1
-      
 print(result)
